@@ -29,7 +29,7 @@ final appbar = AppBar(
   // ),
   backgroundColor: Colors.teal,
   bottom: TabBar(
-    isScrollable: false,
+    isScrollable: true,
     indicatorColor: Colors.white,
     indicatorWeight: 3,
     tabs: [
