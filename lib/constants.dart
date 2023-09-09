@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'Screens/chats.dart';
+import 'Screens/screen_builder.dart';
+
 final appbar = AppBar(
   title: Text("WhatsApp"),
 // centerTitle: true,
@@ -51,5 +54,62 @@ final appbar = AppBar(
       ),
 
     ],
+  ),
+);
+
+final nestedScrollView = NestedScrollView(
+  headerSliverBuilder:
+      (BuildContext context, bool innerBoxIsScrolled) => [
+    SliverOverlapAbsorber(
+      handle:
+      NestedScrollView.sliverOverlapAbsorberHandleFor(context),
+      sliver: SliverSafeArea(
+        top: false,
+        sliver: SliverAppBar(
+          backgroundColor: Colors.teal,
+          pinned: true,
+          floating: true,
+          snap: true,
+          title: Text("Mera WhatsApp"),
+          bottom: TabBar(
+            isScrollable: false,
+            indicatorColor: Colors.white,
+            indicatorWeight: 3,
+            tabs: [
+              Tab(
+                icon: Icon(Icons.groups),
+                // text: "Home",
+              ),
+              Tab(
+                // icon: Icon(Icons.star),
+                text: "Chats",
+              ),
+              Tab(
+                // icon: Icon(Icons.face),
+                text: "Status",
+              ),
+              Tab(
+                // icon: Icon(Icons.settings),
+                text: "Calls",
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  ],
+  body: TabBarView(
+    children: [
+      buildPage('Community Page', Colors.green),
+      ChatPage(),
+      buildPage('Status Page', Colors.pink),
+      buildPage('Call Page', Colors.yellow),
+    ],
+    // children: [
+    //   buildPage('Home Page', Colors.green),
+    //   ChatPage(),
+    //   buildPage('Profile Page', Colors.pink),
+    //   buildPage('Settings Page', Colors.yellow),
+    // ],
   ),
 );
