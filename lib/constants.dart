@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Screens/chats.dart';
+import 'Screens/community.dart';
 import 'Screens/screen_builder.dart';
 
 final appbar = AppBar(
@@ -106,7 +107,7 @@ final nestedScrollView = NestedScrollView(
   ],
   body: TabBarView(
     children: [
-      buildPage('Community Page', Colors.green),
+      communityPage(),
       ChatPage(),
       buildPage('Status Page', Colors.pink),
       buildPage('Call Page', Colors.yellow),

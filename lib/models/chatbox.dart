@@ -64,6 +64,7 @@ class messageTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: (){print("hey");},
       leading: CircleAvatar(
         radius: 30,
         foregroundImage: AssetImage(images[index]),
