@@ -37,22 +37,10 @@ final appbar = AppBar(
     indicatorColor: Colors.white,
     indicatorWeight: 3,
     tabs: [
-      Tab(
-        icon: Icon(Icons.groups),
-        // text: "Home",
-      ),
-      Tab(
-        // icon: Icon(Icons.star),
-        text: "Chats",
-      ),
-      Tab(
-        // icon: Icon(Icons.face),
-        text: "Status",
-      ),
-      Tab(
-        // icon: Icon(Icons.settings),
-        text: "Calls",
-      ),
+      Tab(icon: Icon(Icons.groups),),
+      Tab(text: "Chats",),
+      Tab(text: "Status",),
+      Tab(text: "Calls",),
     ],
   ),
 );
@@ -83,22 +71,10 @@ final nestedScrollView = NestedScrollView(
             indicatorColor: Colors.white,
             indicatorWeight: 3,
             tabs: [
-              Tab(
-                icon: Icon(Icons.groups),
-                // text: "Home",
-              ),
-              Tab(
-                // icon: Icon(Icons.star),
-                text: "Chats",
-              ),
-              Tab(
-                // icon: Icon(Icons.face),
-                text: "Status",
-              ),
-              Tab(
-                // icon: Icon(Icons.settings),
-                text: "Calls",
-              ),
+              Tab(icon: Icon(Icons.groups),),
+              Tab(text: "Chats",),
+              Tab(text: "Status",),
+              Tab(text: "Calls",),
             ],
           ),
         ),

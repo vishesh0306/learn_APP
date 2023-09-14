@@ -9,9 +9,9 @@ class _ChatPageState extends State<ChatPage> {
   late String newName = '';
   late String newMessage = '';
 
-  final List<String> headings = <String>['My Talented Souls', 'MyCTO', 'C'];
-  final List<String> text = <String>['A', 'MyCTO', 'C'];
-  final List<String> images = <String>['lib/images/dudejaJI.png', 'lib/images/dudejaJI.png', 'lib/images/dudejaJI.png'];
+  final List<String> headings = <String>['My Talented Souls', 'MyCTO', 'Elixir'];
+  final List<String> text = <String>['for talented people', 'MyCTO', 'elixir-the-tech-community'];
+  final List<String> images = <String>["cto.png","talented_souls.png","elixir.png"];
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,9 @@ class _ChatPageState extends State<ChatPage> {
         child: ListView.builder(
             itemCount: headings.length,
             itemBuilder: (BuildContext context, int index) {
-              return messageTile(images: images, headings: headings, text: text,index: index,);
-
+              return
+                messageTile(images: images, headings: headings, text: text,index: index,);
+                // chatBox("mycto", "hey", 'lib/images/cto.png');
                 // chatBox(headings[index], text[index], images[index]);
 
 

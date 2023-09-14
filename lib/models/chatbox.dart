@@ -1,51 +1,51 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-// Widget chatBox(String heading, String text, String image) {
-//   return InkWell(
-//     onTap: () {
-//       print("hello bhai");
-//     },
-//     child: Container(
-//       // color: Colors.cyan,
-//       height: 90,
-//       child: Center(
-//           child: Padding(
-//         padding: EdgeInsets.symmetric(vertical: 8),
-//         child: Row(
-//           children: [
-//             InkWell(
-//               child: Padding(
-//                 padding: EdgeInsets.only(left: 15, right: 20),
-//                 child: CircleAvatar(
-//                   radius: 30,
-//                   foregroundImage: AssetImage(image),
-//                 ),
-//               ),
-//               onTap: () {
-//                 print("hello");
-//               },
-//             ),
-//             Column(
-//               crossAxisAlignment: CrossAxisAlignment.start,
-//               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-//               children: [
-//                 Text(
-//                   heading,
-//                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-//                 ),
-//                 Text(
-//                   text,
-//                   style: TextStyle(fontSize: 12),
-//                 ),
-//               ],
-//             ),
-//           ],
-//         ),
-//       )),
-//     ),
-//   );
-// }
+Widget chatBox(String heading, String text, String image) {
+  return InkWell(
+    onTap: () {
+      print("hello bhai");
+    },
+    child: Container(
+      // color: Colors.cyan,
+      height: 90,
+      child: Center(
+          child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 8),
+        child: Row(
+          children: [
+            InkWell(
+              child: Padding(
+                padding: EdgeInsets.only(left: 15, right: 20),
+                child: CircleAvatar(
+                  radius: 30,
+                  foregroundImage: AssetImage(image),
+                ),
+              ),
+              onTap: () {
+                print("hello");
+              },
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  heading,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                ),
+                Text(
+                  text,
+                  style: TextStyle(fontSize: 12),
+                ),
+              ],
+            ),
+          ],
+        ),
+      )),
+    ),
+  );
+}
 
 class messageTile extends StatelessWidget {
   messageTile({
@@ -64,12 +64,15 @@ class messageTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      horizontalTitleGap: 0,
       onTap: (){print("hey");},
-      leading: CircleAvatar(
-        radius: 30,
-        foregroundImage: AssetImage(images[index]),
+      leading: TextButton(onPressed: (){print("hello");},
+        child: CircleAvatar(
+          radius: 30,
+          foregroundImage: AssetImage('lib/images/${images[index]}'),
+        ),
       ),
-      title: Text(headings[index]),
+      title: Text(headings[index],style: TextStyle(fontWeight: FontWeight.w700,fontSize: 18),),
       subtitle: Text(text[index]),
       trailing: Icon(Icons.push_pin),
     );
