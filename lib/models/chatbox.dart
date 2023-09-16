@@ -63,18 +63,19 @@ class messageTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      horizontalTitleGap: 0,
-      onTap: (){print("hey");},
-      leading: TextButton(onPressed: (){print("hello");},
-        child: CircleAvatar(
-          radius: 30,
-          foregroundImage: AssetImage('lib/images/${images[index]}'),
+    return Container(height: 70,
+      child: ListTile(
+        onTap: (){print("hey");},
+        leading: TextButton(onPressed: (){print("hello");},
+          child: CircleAvatar(
+            radius: 30,
+            foregroundImage: AssetImage('lib/images/${images[index]}'),
+          ),
         ),
+        title: Text(headings[index],style: TextStyle(fontWeight: FontWeight.w700,fontSize: 18),),
+        subtitle: Text(text[index]),
+        trailing: Icon(Icons.push_pin),
       ),
-      title: Text(headings[index],style: TextStyle(fontWeight: FontWeight.w700,fontSize: 18),),
-      subtitle: Text(text[index]),
-      trailing: Icon(Icons.push_pin),
     );
   }
 }

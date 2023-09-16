@@ -25,19 +25,6 @@ class _ChatPageState extends State<ChatPage> {
                 messageTile(images: images, headings: headings, text: text,index: index,);
                 // chatBox("mycto", "hey", 'lib/images/cto.png');
                 // chatBox(headings[index], text[index], images[index]);
-
-
-              // ListView(
-              //
-              //   // itemBuilder: (BuildContext context, int index) { return chatBox("kshitiz","hello","lib/images/dudejaJI.png");},
-              //   children: [
-              //     chatBox("My Talented Souls","Welcome to My talented Souls","lib/images/dudejaJI.png"),
-              //     chatBox("MyCTO","Welcome to MyCTO","lib/images/dudejaJI.png"),
-              //     chatBox("My Talented Souls","Welcome to My talented Souls","lib/images/dudejaJI.png"),
-              //   ],
-              // ),
-              // );
-
             }),
       ),
       floatingActionButton: FloatingActionButton(

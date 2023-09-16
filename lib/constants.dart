@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learn_app/Screens/calls.dart';
+import 'package:learn_app/Screens/status.dart';
 
 import 'Screens/chats.dart';
 import 'Screens/community.dart';
@@ -83,10 +85,12 @@ final nestedScrollView = NestedScrollView(
   ],
   body: TabBarView(
     children: [
+      // communityPage(),
       communityPage(),
       ChatPage(),
-      buildPage('Status Page', Colors.pink),
-      buildPage('Call Page', Colors.yellow),
+      StatusPage(),
+      callsPage(),
+      // buildPage('Call Page', Colors.yellow),
     ],
     // children: [
     //   buildPage('Home Page', Colors.green),
@@ -98,21 +102,3 @@ final nestedScrollView = NestedScrollView(
 );
 
 Drawer draw = Drawer(child: SizedBox(width: 100,height: double.infinity,),elevation: 19,);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
